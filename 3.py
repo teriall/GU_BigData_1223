@@ -1,8 +1,27 @@
-# Узнайте у пользователя число n. Найдите сумму чисел n + nn + nnn.
-# Например, пользователь ввёл число 3. Считаем 3 + 33 + 333 = 369.
+# Пользователь вводит месяц в виде целого числа от 1 до 12.
+# Сообщить к какому времени года относится месяц (зима, весна, лето, осень).
+# Напишите решения через list и через dict.
 
-number = input('Пожалуйста, введите число: ')
-two_numbers = (number + number)
-three_numbers = (number + number + number)
+# user_month = int(input('Введите номер месяца в виде целого числа от 1 до 12: '))
+# season = ['зима', 'весна', 'лето', 'осень']
+#
+# if user_month <= 2 or user_month >= 11:
+#     print(f'На дворе {season[0]}')
+# elif 3 <= user_month <= 5:
+#     print(f'На дворе {season[1]}')
+# elif 6 <= user_month <= 8:
+#     print(f'На дворе {season[2]}')
+# else:
+#     print(f'На дворе {season[3]}')
 
-print('Сумма чисел n + nn + nnn:', int(number) + int(two_numbers) + int(three_numbers))
+user_month = int(input('Введите номер месяца в виде целого числа от 1 до 12: '))
+season = {1: 'зима', 2: 'весна', 3: 'лето', 4: 'осень'}
+
+if user_month <= 2 or user_month >= 11:
+    print(f'На дворе {season.get(1)}')
+elif 3 <= user_month <= 5:
+    print(f'На дворе {season.get(2)}')
+elif 6 <= user_month <= 8:
+    print(f'На дворе {season.get(3)}')
+else:
+    print(f'На дворе {season.get(4)}')
